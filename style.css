@@ -1,12 +1,13 @@
-/* Variables CSS pour faciliter la gestion des couleurs et espacements */
+/* Variables CSS - Mise à jour pour le thème clair */
 :root {
-    --color-primary: #000000; /* Noir profond */
-    --color-secondary: #1a1a1a; /* Gris foncé pour les sections */
-    --color-text: #ffffff; /* Texte blanc */
+    --color-primary-bg: #FFFFFF; /* Fond principal blanc */
+    --color-secondary-bg: #F8F8F8; /* Gris très clair pour les sections alternées */
+    --color-text-dark: #222222; /* Texte principal noir profond */
+    --color-text-light: #555555; /* Texte secondaire gris foncé */
     --color-accent: #D4AF37; /* Or comme accent principal */
     --color-cta-hover: #e0b44b; /* Or légèrement plus clair pour le survol */
-    --font-family-headings: 'Montserrat', sans-serif; /* Exemple de police plus moderne */
-    --font-family-body: 'Open Sans', Arial, sans-serif; /* Exemple de police de corps plus lisible */
+    --font-family-headings: 'Montserrat', sans-serif; /* Police suggérée pour les titres */
+    --font-family-body: 'Open Sans', Arial, sans-serif; /* Police suggérée pour le corps */
     --spacing-xl: 120px;
     --spacing-lg: 80px;
     --spacing-md: 40px;
@@ -17,9 +18,9 @@
 body {
     font-family: var(--font-family-body);
     margin: 0;
-    background-color: var(--color-primary);
-    color: var(--color-text);
-    line-height: 1.7; /* Légèrement augmenté pour une meilleure lisibilité */
+    background-color: var(--color-primary-bg);
+    color: var(--color-text-dark); /* Texte principal sombre */
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -32,56 +33,60 @@ body {
 }
 
 /* Hero Section */
+/* Inspiration Digital Wealth Academy: section hero très claire avec des accents */
 .hero {
     text-align: center;
-    padding: var(--spacing-xl) var(--spacing-sm) var(--spacing-lg) var(--spacing-sm); /* Plus de padding en haut */
-    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://via.placeholder.com/1920x1080?text=Votre+Image+de+Fond+Hero+Attrayante') no-repeat center center/cover;
-    min-height: 70vh; /* Plus d'espace visuel */
+    padding: var(--spacing-xl) var(--spacing-sm) var(--spacing-lg) var(--spacing-sm);
+    background-color: var(--color-primary-bg); /* Fond blanc pour le hero */
+    color: var(--color-text-dark); /* Texte sombre sur fond clair */
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-    overflow: hidden; /* Pour les éléments visuels potentiels */
+    overflow: hidden;
 }
 
 /* Hero Title */
 .hero h1 {
     font-family: var(--font-family-headings);
-    font-size: 3.5rem; /* Plus grand et percutant */
+    font-size: 3.5rem;
     margin-bottom: 0.75rem;
-    font-weight: 800; /* Plus impactant */
+    font-weight: 800;
     line-height: 1.1;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Ombre pour la profondeur */
+    color: var(--color-text-dark); /* Titre sombre */
+    /* Pas d'ombre portée pour un look plus épuré */
 }
 
 /* Hero Subtitle */
 .hero-subtitle {
-    font-size: 1.35rem; /* Plus lisible */
+    font-size: 1.35rem;
     max-width: 700px;
     margin: 0 auto 2.5rem auto;
-    font-weight: 300; /* Plus léger pour contraste */
+    font-weight: 300;
+    color: var(--color-text-light); /* Sous-titre légèrement plus clair */
 }
 
 /* CTA Button - General */
 .cta-button {
     display: inline-block;
-    padding: 1.25rem 2.8rem; /* Plus grand pour plus d'impact */
+    padding: 1.25rem 2.8rem;
     background-color: var(--color-accent);
-    color: var(--color-primary);
+    color: var(--color-primary-bg); /* Texte blanc sur bouton doré */
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem; /* Taille de police incitative */
-    border-radius: 8px; /* Bords légèrement plus arrondis */
+    font-size: 1.2rem;
+    border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4); /* Ombre lumineuse */
-    text-transform: uppercase; /* Plus de dynamisme */
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .cta-button:hover {
     background-color: var(--color-cta-hover);
-    transform: translateY(-3px) scale(1.02); /* Soulèvement et léger agrandissement */
+    transform: translateY(-3px) scale(1.02);
     box-shadow: 0 8px 20px rgba(212, 175, 55, 0.6);
 }
 
@@ -102,16 +107,20 @@ body {
     margin-top: 1rem;
     font-style: italic;
     opacity: 0.9;
+    color: var(--color-text-light); /* Plus doux sur fond blanc */
 }
 
 /* General Section Styling */
 .section {
     padding: var(--spacing-lg) 0;
     text-align: center;
+    background-color: var(--color-primary-bg); /* Par défaut en blanc */
+    color: var(--color-text-dark); /* Texte sombre */
 }
 
 .section-light {
-    background-color: var(--color-secondary);
+    background-color: var(--color-secondary-bg); /* Gris très clair pour l'alternance */
+    color: var(--color-text-dark);
 }
 
 /* Section Titles */
@@ -122,14 +131,14 @@ body {
     font-weight: 700;
     position: relative;
     display: inline-block;
-    color: var(--color-text); /* S'assurer de la couleur du texte */
+    color: var(--color-text-dark); /* Titre sombre */
 }
 
 .section-title::after {
     content: '';
     display: block;
-    width: 80px; /* Plus long */
-    height: 5px; /* Plus épais */
+    width: 80px;
+    height: 5px;
     background-color: var(--color-accent);
     margin: 15px auto 0 auto;
     border-radius: 3px;
@@ -142,6 +151,7 @@ body {
     max-width: 800px;
     margin: -1rem auto var(--spacing-md) auto;
     opacity: 0.9;
+    color: var(--color-text-light);
 }
 
 /* Grid Layout for Cards */
@@ -154,30 +164,31 @@ body {
 
 /* Card Styling */
 .card {
-    background-color: #2c2c2c; /* Légèrement plus clair que le fond pour se distinguer */
+    background-color: var(--color-primary-bg); /* Fond blanc pour les cartes */
     padding: 2.2rem;
-    border-radius: 10px; /* Plus arrondis */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre plus subtile */
+    border: 1px solid #E0E0E0; /* Bordure très légère pour délimiter */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex; /* Utilisation de flexbox pour l'icône et le texte */
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
 .card:hover {
-    transform: translateY(-8px); /* Soulèvement plus prononcé */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée au survol */
 }
 
 .card-icon {
-    font-size: 3rem; /* Grande icône */
+    font-size: 3rem;
     margin-bottom: 1rem;
     color: var(--color-accent);
 }
 
 .card h3 {
     font-family: var(--font-family-headings);
-    color: var(--color-accent);
+    color: var(--color-text-dark); /* Titre de carte sombre */
     margin-top: 0;
     font-size: 1.8rem;
     margin-bottom: 1rem;
@@ -187,6 +198,7 @@ body {
 .card p {
     font-size: 1rem;
     line-height: 1.6;
+    color: var(--color-text-light); /* Texte de carte légèrement plus clair */
 }
 
 /* Checkmark List Styling */
@@ -200,6 +212,7 @@ ul.checkmark-list li {
     position: relative;
     margin-bottom: 0.9rem;
     font-size: 1.05rem;
+    color: var(--color-text-light); /* Texte de liste légèrement plus clair */
 }
 
 ul.checkmark-list li::before {
@@ -209,12 +222,12 @@ ul.checkmark-list li::before {
     left: 0;
     font-weight: bold;
     font-size: 1.2rem;
-    top: 2px; /* Ajustement de la position */
+    top: 2px;
 }
 
 /* Testimonials Section */
 .section-testimonials {
-    background-color: var(--color-primary); /* S'assurer du fond */
+    background-color: var(--color-secondary-bg); /* Fond gris clair pour les témoignages */
 }
 
 .testimonial-grid {
@@ -225,26 +238,28 @@ ul.checkmark-list li::before {
 }
 
 .testimonial-card {
-    background-color: #2c2c2c;
+    background-color: var(--color-primary-bg); /* Fond blanc pour les cartes de témoignage */
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E0E0E0;
     font-style: italic;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Assure que l'auteur est en bas */
+    justify-content: space-between;
 }
 
 .testimonial-card p {
     font-size: 1.15rem;
     margin-bottom: 1.5rem;
+    color: var(--color-text-light);
 }
 
 .testimonial-author {
     font-weight: bold;
     font-style: normal;
-    margin-top: auto; /* Pousse l'auteur vers le bas */
+    margin-top: auto;
     display: block;
     color: var(--color-accent);
 }
@@ -256,11 +271,11 @@ ul.checkmark-list li::before {
 }
 
 .proof-image {
-    max-width: 90%; /* Légèrement plus petit pour ne pas écraser */
+    max-width: 90%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-    border: 3px solid var(--color-accent); /* Cadre doré */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Ombre plus douce */
+    border: 3px solid var(--color-accent);
 }
 
 .proof-caption {
@@ -274,20 +289,22 @@ ul.checkmark-list li::before {
 
 /* Final CTA Section */
 .final-cta {
-    background-color: var(--color-secondary);
-    padding: var(--spacing-xl) var(--spacing-sm); /* Beaucoup d'espace pour l'impact */
+    background-color: var(--color-primary-bg); /* Fond blanc pour la section finale CTA */
+    padding: var(--spacing-xl) var(--spacing-sm);
+    color: var(--color-text-dark); /* Texte sombre */
 }
 
 .cta-large-text {
-    font-size: 1.4rem; /* Grand texte pour l'appel à l'action final */
+    font-size: 1.4rem;
     max-width: 800px;
     margin: 0 auto 3rem auto;
     font-weight: 500;
     line-height: 1.6;
+    color: var(--color-text-light);
 }
 
 .large-cta {
-    padding: 1.5rem 3.5rem; /* Bouton encore plus grand */
+    padding: 1.5rem 3.5rem;
     font-size: 1.3rem;
 }
 
@@ -296,17 +313,18 @@ ul.checkmark-list li::before {
     margin-top: 2rem;
     font-weight: bold;
     color: var(--color-accent);
-    text-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+    text-shadow: none; /* Pas d'ombre sur le texte pour plus de clarté */
 }
 
 /* Footer */
 footer {
-    background-color: var(--color-primary);
+    background-color: #EEEEEE; /* Gris très clair pour le footer */
     text-align: center;
     padding: var(--spacing-md) var(--spacing-sm);
     margin-top: var(--spacing-lg);
     font-size: 0.9rem;
-    border-top: 1px solid #333; /* Séparateur subtil */
+    border-top: 1px solid #E0E0E0; /* Bordure très claire */
+    color: var(--color-text-light); /* Texte clair dans le footer */
 }
 
 footer a {
@@ -316,7 +334,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #ffffff;
+    color: var(--color-text-dark); /* Texte plus foncé au survol */
 }
 
 /* Media Queries for Responsiveness */
@@ -354,7 +372,7 @@ footer a:hover {
         font-size: 1.05rem;
     }
     .grid {
-        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+        grid-template-columns: 1fr;
     }
     .card {
         padding: 1.8rem;
@@ -387,7 +405,7 @@ footer a:hover {
         font-size: 1.5rem;
     }
     .cta-button {
-        width: 100%; /* Bouton pleine largeur */
+        width: 100%;
         padding: 1rem 1.5rem;
     }
     .large-cta {
