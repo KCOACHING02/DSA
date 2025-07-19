@@ -1,0 +1,399 @@
+/* Variables CSS pour faciliter la gestion des couleurs et espacements */
+:root {
+    --color-primary: #000000; /* Noir profond */
+    --color-secondary: #1a1a1a; /* Gris foncé pour les sections */
+    --color-text: #ffffff; /* Texte blanc */
+    --color-accent: #D4AF37; /* Or comme accent principal */
+    --color-cta-hover: #e0b44b; /* Or légèrement plus clair pour le survol */
+    --font-family-headings: 'Montserrat', sans-serif; /* Exemple de police plus moderne */
+    --font-family-body: 'Open Sans', Arial, sans-serif; /* Exemple de police de corps plus lisible */
+    --spacing-xl: 120px;
+    --spacing-lg: 80px;
+    --spacing-md: 40px;
+    --spacing-sm: 20px;
+}
+
+/* Base Body Styles */
+body {
+    font-family: var(--font-family-body);
+    margin: 0;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    line-height: 1.7; /* Légèrement augmenté pour une meilleure lisibilité */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global Container */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 var(--spacing-sm);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-sm) var(--spacing-lg) var(--spacing-sm); /* Plus de padding en haut */
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://via.placeholder.com/1920x1080?text=Votre+Image+de+Fond+Hero+Attrayante') no-repeat center center/cover;
+    min-height: 70vh; /* Plus d'espace visuel */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; /* Pour les éléments visuels potentiels */
+}
+
+/* Hero Title */
+.hero h1 {
+    font-family: var(--font-family-headings);
+    font-size: 3.5rem; /* Plus grand et percutant */
+    margin-bottom: 0.75rem;
+    font-weight: 800; /* Plus impactant */
+    line-height: 1.1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Ombre pour la profondeur */
+}
+
+/* Hero Subtitle */
+.hero-subtitle {
+    font-size: 1.35rem; /* Plus lisible */
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
+    font-weight: 300; /* Plus léger pour contraste */
+}
+
+/* CTA Button - General */
+.cta-button {
+    display: inline-block;
+    padding: 1.25rem 2.8rem; /* Plus grand pour plus d'impact */
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem; /* Taille de police incitative */
+    border-radius: 8px; /* Bords légèrement plus arrondis */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4); /* Ombre lumineuse */
+    text-transform: uppercase; /* Plus de dynamisme */
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: var(--color-cta-hover);
+    transform: translateY(-3px) scale(1.02); /* Soulèvement et léger agrandissement */
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.6);
+}
+
+/* Pulse Animation for CTA */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+/* Small text under CTA */
+.cta-subtext {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* General Section Styling */
+.section {
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+}
+
+.section-light {
+    background-color: var(--color-secondary);
+}
+
+/* Section Titles */
+.section-title {
+    font-family: var(--font-family-headings);
+    font-size: 2.8rem;
+    margin-bottom: var(--spacing-md);
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    color: var(--color-text); /* S'assurer de la couleur du texte */
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px; /* Plus long */
+    height: 5px; /* Plus épais */
+    background-color: var(--color-accent);
+    margin: 15px auto 0 auto;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+}
+
+/* Subtitle for Sections */
+.subtitle {
+    font-size: 1.15rem;
+    max-width: 800px;
+    margin: -1rem auto var(--spacing-md) auto;
+    opacity: 0.9;
+}
+
+/* Grid Layout for Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    text-align: left;
+}
+
+/* Card Styling */
+.card {
+    background-color: #2c2c2c; /* Légèrement plus clair que le fond pour se distinguer */
+    padding: 2.2rem;
+    border-radius: 10px; /* Plus arrondis */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Utilisation de flexbox pour l'icône et le texte */
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Soulèvement plus prononcé */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card-icon {
+    font-size: 3rem; /* Grande icône */
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+}
+
+.card h3 {
+    font-family: var(--font-family-headings);
+    color: var(--color-accent);
+    margin-top: 0;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Checkmark List Styling */
+ul.checkmark-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.checkmark-list li {
+    padding-left: 2.2rem;
+    position: relative;
+    margin-bottom: 0.9rem;
+    font-size: 1.05rem;
+}
+
+ul.checkmark-list li::before {
+    content: '✔';
+    color: var(--color-accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    top: 2px; /* Ajustement de la position */
+}
+
+/* Testimonials Section */
+.section-testimonials {
+    background-color: var(--color-primary); /* S'assurer du fond */
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.testimonial-card {
+    background-color: #2c2c2c;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    font-style: italic;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Assure que l'auteur est en bas */
+}
+
+.testimonial-card p {
+    font-size: 1.15rem;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    font-style: normal;
+    margin-top: auto; /* Pousse l'auteur vers le bas */
+    display: block;
+    color: var(--color-accent);
+}
+
+/* Proof Visuals */
+.proof-visuals {
+    margin-top: var(--spacing-lg);
+    text-align: center;
+}
+
+.proof-image {
+    max-width: 90%; /* Légèrement plus petit pour ne pas écraser */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border: 3px solid var(--color-accent); /* Cadre doré */
+}
+
+.proof-caption {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Final CTA Section */
+.final-cta {
+    background-color: var(--color-secondary);
+    padding: var(--spacing-xl) var(--spacing-sm); /* Beaucoup d'espace pour l'impact */
+}
+
+.cta-large-text {
+    font-size: 1.4rem; /* Grand texte pour l'appel à l'action final */
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.large-cta {
+    padding: 1.5rem 3.5rem; /* Bouton encore plus grand */
+    font-size: 1.3rem;
+}
+
+.risk-free-guarantee {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    color: var(--color-accent);
+    text-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-primary);
+    text-align: center;
+    padding: var(--spacing-md) var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+    font-size: 0.9rem;
+    border-top: 1px solid #333; /* Séparateur subtil */
+}
+
+footer a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .section-title {
+        font-size: 2.5rem;
+    }
+    .cta-button {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+    .large-cta {
+        padding: 1.2rem 2.8rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: var(--spacing-lg) var(--spacing-sm) var(--spacing-md) var(--spacing-sm);
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1.15rem;
+    }
+    .section-title {
+        font-size: 2.2rem;
+    }
+    .subtitle {
+        font-size: 1.05rem;
+    }
+    .grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+    .card {
+        padding: 1.8rem;
+    }
+    .testimonial-card p {
+        font-size: 1.05rem;
+    }
+    .proof-image {
+        max-width: 100%;
+    }
+    .final-cta {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+    .cta-large-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .card h3 {
+        font-size: 1.5rem;
+    }
+    .cta-button {
+        width: 100%; /* Bouton pleine largeur */
+        padding: 1rem 1.5rem;
+    }
+    .large-cta {
+        width: 100%;
+    }
+    .proof-caption {
+        font-size: 0.95rem;
+    }
+}
