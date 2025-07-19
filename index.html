@@ -3,812 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La DSA : Maîtrisez le Marketing Digital & Générez 100% des Profits !</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        /* --- Styles Généraux --- */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #f8f8f8;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 3.2em;
-            text-align: center;
-            line-height: 1.2;
-        }
-
-        h2 {
-            font-size: 2.5em;
-            text-align: center;
-            margin-top: 50px;
-            margin-bottom: 30px;
-            color: #1a5276;
-        }
-
-        h3 {
-            font-size: 1.8em;
-            color: #34495e;
-        }
-
-        p {
-            margin-bottom: 15px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #e74c3c; /* Rouge attrayant */
-            color: white;
-            padding: 15px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            text-align: center;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: #c0392b;
-            transform: translateY(-2px);
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        /* --- Hero Section --- */
-        .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1920x800?text=Image+Hero+DSA') no-repeat center center/cover; /* Remplacez par votre image */
-            color: white;
-            padding: 100px 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 70vh;
-            text-align: center;
-            position: relative;
-        }
-
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.4); /* Overlay pour le texte */
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 900px;
-        }
-
-        .hero-section h1 {
-            font-size: 4em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-        }
-
-        .hero-section p {
-            font-size: 1.4em;
-            margin-bottom: 40px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-        }
-
-        /* --- Sections de Contenu Générales --- */
-        section {
-            padding: 60px 20px;
-            background-color: white;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-radius: 10px;
-        }
-
-        section:nth-child(even) {
-            background-color: #f2f7fb;
-        }
-
-        .icon-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .icon-item {
-            flex-basis: calc(33% - 40px); /* 3 items par ligne */
-            text-align: center;
-            background-color: #ecf0f1;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .icon-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .icon-item img {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 15px;
-        }
-
-        .icon-item h3 {
-            font-size: 1.3em;
-            margin-top: 0;
-        }
-
-        /* --- Section Revente (Clé) --- */
-        .revente-section {
-            background-color: #27ae60; /* Vert pour la croissance/argent */
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .revente-section h2 {
-            color: white;
-            font-size: 3em;
-        }
-
-        .revente-section p {
-            font-size: 1.3em;
-            max-width: 900px;
-            margin: 0 auto 40px auto;
-        }
-
-        .revente-benefits {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-
-        .revente-benefit-item {
-            background-color: rgba(255, 255, 255, 0.15);
-            padding: 25px;
-            border-radius: 10px;
-            flex-basis: calc(33% - 30px);
-            max-width: 350px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            text-align: left;
-        }
-        .revente-benefit-item h3 {
-            color: white;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        .revente-benefit-item p {
-            font-size: 1em;
-            margin-bottom: 0;
-        }
-
-
-        /* --- Tunnel de Ventes Visuel --- */
-        .sales-tunnel {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .tunnel-step {
-            flex-basis: calc(25% - 30px); /* 4 étapes par ligne */
-            text-align: center;
-            background-color: #fff;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            position: relative;
-            min-height: 280px; /* Pour un alignement visuel */
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
-
-        .tunnel-step:hover {
-            transform: translateY(-8px);
-        }
-
-        .tunnel-step img {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 15px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #3498db;
-        }
-        .tunnel-step h3 {
-            font-size: 1.4em;
-            color: #2c3e50;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-        .tunnel-step p {
-            font-size: 0.95em;
-            color: #555;
-        }
-
-        /* Flèches pour le tunnel (CSS Pur, peut être amélioré avec SVG ou images) */
-        .tunnel-step:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: -25px; /* Positionnement de la flèche */
-            transform: translateY(-50%);
-            width: 0;
-            height: 0;
-            border-top: 15px solid transparent;
-            border-bottom: 15px solid transparent;
-            border-left: 20px solid #bdc3c7; /* Couleur de la flèche */
-            z-index: 5;
-        }
-        .tunnel-step:nth-child(4n)::after { /* Pas de flèche après le 4ème élément (fin de ligne) */
-            content: none;
-        }
-        .tunnel-step:nth-child(4n):not(:last-child) { /* Ajustement pour les marges du dernier de la ligne */
-            margin-right: 0;
-        }
-        @media (min-width: 768px) {
-            .tunnel-step:nth-child(4n):not(:last-child)::after {
-                content: ''; /* Réactive la flèche si moins de 4 sur la dernière ligne */
-            }
-        }
-        @media (max-width: 1000px) {
-            .tunnel-step {
-                flex-basis: calc(48% - 30px); /* 2 par ligne sur tablettes */
-            }
-            .tunnel-step:not(:last-child)::after {
-                content: none; /* Désactiver les flèches horizontales sur tablettes */
-            }
-            .tunnel-step:nth-child(odd)::after { /* Flèche pour le 1er de chaque paire */
-                content: '';
-                position: absolute;
-                top: auto;
-                bottom: -20px; /* Positionnement vertical */
-                left: 50%;
-                transform: translateX(-50%) rotate(90deg); /* Rotation pour flèche vers le bas */
-                border-left-color: #bdc3c7;
-                border-top: 15px solid transparent;
-                border-bottom: 15px solid transparent;
-                border-right: 20px solid transparent;
-            }
-            .tunnel-step:last-child::after {
-                 content: none; /* Pas de flèche pour le dernier */
-            }
-        }
-
-
-        /* --- Section Communauté / Preuve Sociale --- */
-        .community-section {
-            background-color: #ecf0f1;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .community-logos {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin-top: 30px;
-            margin-bottom: 40px;
-        }
-        .community-logos img {
-            width: 100px;
-            height: auto;
-        }
-
-        /* --- Section Vidéo de Présentation --- */
-        .video-section {
-            padding: 60px 20px;
-            background-color: white;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* Ratio 16:9 */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: #000;
-            margin: 40px auto;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-        }
-
-        .video-wrapper video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-        }
-
-        /* --- Contenu Détaillé --- */
-        .module-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 40px;
-        }
-
-        .module-item {
-            background-color: #fcfcfc;
-            border: 1px solid #eee;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-            transition: transform 0.3s ease;
-        }
-
-        .module-item:hover {
-            transform: translateY(-3px);
-        }
-
-        .module-item h3 {
-            color: #3498db;
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-        }
-        .module-item h3 span {
-            font-size: 0.7em;
-            background-color: #3498db;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            margin-left: 15px;
-        }
-
-        .module-item ul {
-            list-style: disc;
-            margin-left: 20px;
-            padding: 0;
-        }
-
-        .module-item li {
-            margin-bottom: 8px;
-        }
-
-        /* --- FAQ Section --- */
-        .faq-item {
-            background-color: #fcfcfc;
-            border: 1px solid #eee;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-        }
-
-        .faq-question {
-            padding: 18px 25px;
-            background-color: #ffffff;
-            border-bottom: 1px solid #eee;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            font-size: 1.1em;
-            color: #444;
-            transition: background-color 0.2s ease;
-        }
-
-        .faq-question:hover {
-            background-color: #f5f5f5;
-        }
-
-        .faq-question::after {
-            content: '+';
-            font-size: 1.5em;
-            transition: transform 0.3s ease;
-        }
-
-        .faq-question.active::after {
-            content: '-';
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            padding: 0 25px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
-            background-color: #fdfdfd;
-        }
-
-        .faq-answer.active {
-            max-height: 200px; /* Ajustez selon le contenu */
-            padding-top: 15px;
-            padding-bottom: 15px;
-        }
-
-        /* --- Footer --- */
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 0.9em;
-            margin-top: 50px;
-        }
-
-        footer a {
-            color: #3498db;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* --- Responsive Design --- */
-        @media (max-width: 900px) {
-            .hero-section h1 {
-                font-size: 3em;
-            }
-            .hero-section p {
-                font-size: 1.2em;
-            }
-            h1 {
-                font-size: 2.5em;
-            }
-            h2 {
-                font-size: 2em;
-            }
-            .icon-item, .revente-benefit-item {
-                flex-basis: calc(48% - 40px); /* 2 items par ligne */
-            }
-            .tunnel-step {
-                flex-basis: calc(48% - 30px); /* 2 étapes par ligne */
-            }
-            .revente-benefit-item {
-                flex-basis: calc(100% - 30px);
-            }
-        }
-
-        @media (max-width: 600px) {
-            .hero-section h1 {
-                font-size: 2.2em;
-            }
-            .hero-section p {
-                font-size: 1em;
-            }
-            h1 {
-                font-size: 2em;
-            }
-            h2 {
-                font-size: 1.8em;
-            }
-            .icon-item, .tunnel-step {
-                flex-basis: 100%; /* 1 item par ligne sur mobile */
-            }
-            .revente-benefit-item {
-                flex-basis: 100%;
-            }
-            .btn {
-                padding: 12px 25px;
-                font-size: 1em;
-            }
-            .tunnel-step:not(:last-child)::after {
-                 content: none; /* Pas de flèche sur mobile pour éviter l'encombrement */
-            }
-            .community-logos {
-                flex-direction: column;
-                gap: 20px;
-            }
-        }
-    </style>
+    <title>Digital Success Academy | Lancez Votre Business en Ligne Rentable DÈS AUJOURD'HUI !</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="hero-section">
-        <div class="hero-content">
-            <h1>La DSA : Maîtrisez le Marketing Digital <br> **ET Générez 100% des Profits en la Revendant !**</h1>
-            <p>Plongez dans **plus de 50 heures de vidéos complètes** pour exceller dans le marketing digital et la promotion de produits numériques, même sans expérience. **Repartez avec les droits de revente à 100% !**</p>
-            <a href="#pricing" class="btn">Accédez à la Double Opportunité : Apprenez & Revendez !</a>
+    <header class="hero">
+        <div class="container">
+            <h1>Arrêtez de Rêver, Vivez de Votre Business Digital. La Réussite Commence Ici.</h1>
+            <p class="hero-subtitle">Rejoignez la **Digital Success Academy**, la seule formation qui vous fournit les **stratégies éprouvées**, les **outils essentiels**, ET un **produit prêt à vendre** pour des revenus 100% automatisés. Plus de **4500 membres** nous font déjà confiance.</p>
+            <a href="checkout.html" class="cta-button pulse" aria-label="Découvrez comment transformer votre vie avec la Digital Success Academy">OUI, JE VEUX LANCER MON BUSINESS RENTABLE !</a>
+            <p class="cta-subtext">Paiement sécurisé en 1x, 3x ou 4x disponible. Votre investissement **rentabilisé dès votre première vente !**</p>
         </div>
     </header>
 
-    <section class="problem-solution-section">
-        <div class="container">
-            <h2>Vous en avez assez de... ? Découvrez la Solution DSA</h2>
-            <div class="text-center">
-                <p>Vous vous sentez perdu face à la complexité du marketing digital ? Vous rêvez de vendre des produits numériques mais ne savez pas par où commencer ? Vous cherchez une formation concrète et un vrai soutien, pas juste des théories ? Et si vous pouviez non seulement apprendre, mais aussi **générer des revenus immédiats** avec ce que vous acquérez ?</p>
-                <p>Fini les heures passées à chercher des informations éparses ! La DSA est la **formation clé en main** qui regroupe **plus de 50 heures de vidéos** pour vous guider, étape par étape, de A à Z, dans le monde lucratif du marketing digital et de la promotion de produits numériques.</p>
-                <p>Mais ce n'est pas tout : en rejoignant la DSA, **vous obtenez également les droits de revente à 100%**, vous permettant de récupérer votre investissement et de générer un revenu supplémentaire immédiat !</p>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="container">
-            <h2>Ce que la DSA va Transformer pour Vous</h2>
-            <div class="icon-list">
-                <div class="icon-item">
-                    <img src="https://via.placeholder.com/80?text=Skill" alt="Icône Maîtrise">
-                    <h3>Maîtrise Complète du Digital</h3>
-                    <p>Devenez un expert en marketing digital et en promotion de produits numériques, prêt à l'action.</p>
-                </div>
-                <div class="icon-item">
-                    <img src="https://via.placeholder.com/80?text=Video" alt="Icône Vidéos">
-                    <h3>50+ Heures de Vidéos HD</h3>
-                    <p>Un contenu dense, pratique et facile à suivre, structuré pour un apprentissage optimal.</p>
-                </div>
-                <div class="icon-item">
-                    <img src="https://via.placeholder.com/80?text=Key" alt="Icône Clé en Main">
-                    <h3>Apprentissage Clé en Main</h3>
-                    <p>Un programme structuré qui vous guide du débutant à l'expert sans vous sentir dépassé.</p>
-                </div>
-                <div class="icon-item">
-                    <img src="https://via.placeholder.com/80?text=Community" alt="Icône Communauté">
-                    <h3>Communauté d'Entraide Active</h3>
-                    <p>Bénéficiez d'un soutien continu et de l'expertise de professionnels sur Telegram & Skool.</p>
-                </div>
-                <div class="icon-item">
-                    <img src="https://via.placeholder.com/80?text=Profit" alt="Icône Profits">
-                    <h3>Potentiel de Revenus Illimité</h3>
-                    <p>Créez votre propre source de revenus en ligne et atteignez l'indépendance financière.</p>
-                </div>
-                <div class="icon-item">
-                    <img src="https://via.placeholder.com/80?text=License" alt="Icône Licence">
-                    <h3>**Droits de Revente à 100% Inclus !**</h3>
-                    <p>Une opportunité unique de récupérer votre investissement et de générer des profits directs.</p>
+    <main>
+        <section class="section" id="ce-que-vous-recevez">
+            <div class="container">
+                <h2 class="section-title">Ce que Vous Allez Recevoir, et Qui Va **Changer Votre Vie** :</h2>
+                <div class="grid">
+                    <article class="card">
+                        <div class="card-icon">💡</div> <h3>La Formation ULTIME, de A à Z.</h3>
+                        <p>Plongez dans des dizaines d'heures de modules pratiques : **Branding percutant**, **Copywriting persuasif**, **Tunnels de Vente optimisés**, **Email Marketing automatisé**, maîtrise d'**Instagram & TikTok**, et bien plus encore. Tout est là pour vous transformer en expert du marketing digital.</p>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon">💰</div>
+                        <h3>Votre Business CLÉ EN MAIN : Droit de Revente Exclusif (MRR)</h3>
+                        <p>Non seulement vous allez **acquérir des compétences inestimables**, mais vous obtenez en prime le **Droit de Revente (MRR)** de la formation DSA elle-même ! Revendez la formation pour **597€** et **gardez 100% des bénéfices**. Votre premier produit est déjà prêt à générer vos revenus !</p>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon">🚀</div>
+                        <h3>Des Produits & Contenus "Prêts à l'Emploi" pour Démarrer Fort</h3>
+                        <p>Recevez **12 produits digitaux additionnels (PLR)** que vous pouvez vendre immédiatement. Accédez également à une **banque de plus de 100 000 contenus** (vidéos, images, idées) pour alimenter vos réseaux sociaux, attirer l'attention et convertir, **sans effort de création !**</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="revente-section">
-        <div class="container">
-            <h2>🔥 **L'Opportunité Ultime : Revendez la DSA et Gardez 100% des Bénéfices !** 🔥</h2>
-            <p>Nous croyons tellement en la valeur de la DSA que nous voulons que vous puissiez non seulement transformer vos compétences, mais aussi votre situation financière. En rejoignant la DSA aujourd'hui, vous obtenez les **droits de revente complets** sur l'intégralité de la formation.</p>
-            <div class="revente-benefits">
-                <div class="revente-benefit-item">
-                    <h3>100% de Vos Ventes</h3>
-                    <p>Chaque fois que vous revendez la DSA, la totalité du montant de la vente est pour vous, sans aucune commission.</p>
-                </div>
-                <div class="revente-benefit-item">
-                    <h3>Formation sur la Revente Incluse</h3>
-                    <p>La DSA vous enseigne les stratégies exactes pour promouvoir efficacement la formation et réaliser vos premières ventes.</p>
-                </div>
-                <div class="revente-benefit-item">
-                    <h3>Un Actif Numérique Rentable</h3>
-                    <p>Vous ne faites pas qu'apprendre, vous acquérez un produit à forte valeur que vous pouvez monétiser à votre guise.</p>
-                </div>
-                <div class="revente-benefit-item">
-                    <h3>Récupérez Votre Investissement Rapidement</h3>
-                    <p>Quelques ventes suffisent pour rentabiliser votre achat et commencer à générer des profits nets.</p>
+        <section class="section section-light" id="modules-formation">
+            <div class="container">
+                <h2 class="section-title">Découvrez l'Intérieur de la Digital Success Academy : Votre Chemin Vers la Liberté</h2>
+                <p class="subtitle">Chaque module est conçu pour vous apporter des compétences concrètes et directement applicables pour **générer des résultats rapidement**.</p>
+                <div class="grid">
+                    <article class="card">
+                        <h3>Fondations & Stratégie : Bâtir sur du Solide</h3>
+                        <ul class="checkmark-list">
+                            <li>✔ Le **Mindset de la Réussite** pour ne jamais abandonner.</li>
+                            <li>✔ Créer un **Produit Digital Irrésistible** qui se vend tout seul.</li>
+                            <li>✔ Maîtriser les **Tunnels de Vente** (Systeme.io, Stan Store) pour des conversions maximales.</li>
+                            <li>✔ **Email Marketing & Automatisation** : Transformez vos leads en clients fidèles.</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <h3>Acquisition & Viralité : Attirez les Clients comme un Aimant</h3>
+                        <ul class="checkmark-list">
+                            <li>✔ Les **Secrets d’Instagram & TikTok Mastery** : Devenez viral !</li>
+                            <li>✔ Votre **Branding Blueprint** & Stratégies Facecam pour une connexion authentique.</li>
+                            <li>✔ **Création de contenu avec l'IA** : Gagnez un temps précieux et soyez toujours inspiré.</li>
+                            <li>✔ **Growth Hacking** pour exploser votre visibilité sans dépenser une fortune.</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <h3>Vente & Scalabilité : Transformez l'Intérêt en Revenus</h3>
+                        <ul class="checkmark-list">
+                            <li>✔ **Copywriting Formula** : Écrivez pour convaincre et vendre, à coup sûr.</li>
+                            <li>✔ **Stratégies de Vente avancées** : Augmentez votre panier moyen et votre fréquence d'achat.</li>
+                            <li>✔ **Marketing d'Affiliation** : Générez des commissions sans créer de produit.</li>
+                            <li>✔ **Délégation et Automatisation du travail** : Libérez-vous du temps et faites croître votre business !</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
-            <a href="#pricing" class="btn" style="margin-top: 40px;">Je Veux Les Droits de Revente à 100% !</a>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <div class="container">
-            <h2>Votre Parcours de Transformation avec la DSA : Le Tunnel du Succès</h2>
-            <div class="sales-tunnel">
-                <div class="tunnel-step">
-                    <img src="https://via.placeholder.com/100?text=Step1" alt="Étape 1 Fondations">
-                    <h3>1. Les Fondations Solides</h3>
-                    <p>Découvrez les bases du marketing digital, définissez votre niche et développez un état d'esprit entrepreneurial inébranlable.</p>
+        <section class="section section-testimonials" id="temoignages-resultats">
+            <div class="container">
+                <h2 class="section-title">Ils ont osé. Ils ont Agi. Et ils Récoltent ENFIN les Fruits.</h2>
+                <p class="subtitle">Découvrez ce que nos membres disent de leur transformation et leurs **résultats concrets**.</p>
+
+                <div class="testimonial-grid">
+                    <blockquote class="testimonial-card">
+                        <p>"Grâce à la DSA, j'ai non seulement appris à construire mon audience, mais ma première vente de la formation m'a déjà rapporté **597€ en moins de 10 jours** ! C'est dingue, l'investissement est déjà amorti !"</p>
+                        <cite class="testimonial-author">- Léa M., Membre Active</cite>
+                    </blockquote>
+                    <blockquote class="testimonial-card">
+                        <p>"Je n'y connaissais rien. Maintenant, j'ai mon propre tunnel de vente automatisé et je vois les ventes tomber. La simplicité des explications et le support sont incroyables. **Ma vie a changé en 1 mois**."</p>
+                        <cite class="testimonial-author">- David C., Entrepreneur Débutant</cite>
+                    </blockquote>
+                    <blockquote class="testimonial-card">
+                        <p>"Le droit de revente, c'est ce qui m'a convaincu. J'ai revendu 3 fois la formation en un mois ! **1791€ de revenus supplémentaires** juste avec ça. Merci la DSA pour cette opportunité en or."</p>
+                        <cite class="testimonial-author">- Sophie D., Marketeuse confirmée</cite>
+                    </blockquote>
                 </div>
-                <div class="tunnel-step">
-                    <img src="https://via.placeholder.com/100?text=Step2" alt="Étape 2 Création">
-                    <h3>2. Création d'Offres Irrésistibles</h3>
-                    <p>Apprenez à identifier des produits à vendre, créer du contenu engageant et bâtir votre marque personnelle.</p>
-                </div>
-                <div class="tunnel-step">
-                    <img src="https://via.placeholder.com/100?text=Step3" alt="Étape 3 Promotion">
-                    <h3>3. Stratégies de Vente & Revente</h3>
-                    <p>Maîtrisez les tunnels de vente, le trafic, et **apprenez à promouvoir la DSA pour générer 100% de profit.**</p>
-                </div>
-                <div class="tunnel-step">
-                    <img src="https://via.placeholder.com/100?text=Step4" alt="Étape 4 Croissance">
-                    <h3>4. Scaling & Optimisation</h3>
-                    <p>Analysez vos résultats, optimisez vos campagnes et faites croître votre business de manière exponentielle et durable.</p>
+                <div class="proof-visuals">
+                    <img src="https://via.placeholder.com/1000x500?text=VOS+PREUVES+DE+PAIEMENT+REELLES+ICI" alt="Captures d'écran de paiements réussis des membres de la Digital Success Academy" loading="lazy" class="proof-image">
+                    <p class="proof-caption">Des résultats comme ceux-ci sont **QUOTIDIENS** pour nos membres !</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="video-section">
-        <div class="container">
-            <h2>Découvrez la DSA en Action : Un Aperçu des Modules et Preuves</h2>
-            <p>Plongez au cœur de la formation avec un aperçu visuel des modules, des outils et du type de résultats que vous pouvez obtenir.</p>
-            <div class="video-wrapper">
-                <video controls poster="https://via.placeholder.com/1280x720?text=Miniature+DSA+Video">
-                    <source src="VIDEODSA.mp4" type="video/mp4">
-                    Votre navigateur ne prend pas en charge la balise vidéo.
-                </video>
+        <section class="section final-cta" id="decision-action">
+            <div class="container">
+                <h2 class="section-title">Le Moment d'Agir, c'est **MAINTENANT**.</h2>
+                <p class="cta-large-text">Combien de temps allez-vous encore attendre pour **prendre votre indépendance financière** ? La Digital Success Academy est votre **raccourci vers la réussite**. Pour seulement **597€**, un investissement **garanti rentable dès votre première vente !** (Paiement en plusieurs fois disponible).</p>
+                <a href="checkout.html" class="cta-button pulse large-cta" aria-label="Je saisis ma chance et je démarre mon business aujourd'hui">JE SAISIS MA CHANCE ET JE DÉMARRE AUJOURD'HUI !</a>
+                <p class="risk-free-guarantee">**AUCUN RISQUE :** Votre succès est notre priorité. Rejoignez une communauté de leaders qui vous soutiennent.</p>
             </div>
-            <p style="font-style: italic; font-size: 0.9em; margin-top: 20px;">*Cette vidéo vous donne un aperçu des contenus riches et des opportunités au sein de la DSA.*</p>
-        </div>
-    </section>
-
-    <section class="community-section">
-        <div class="container">
-            <h2>Rejoignez une Communauté d'Excellence et d'Entraide</h2>
-            <p>À la DSA, vous n'êtes jamais seul. Bénéficiez de l'expérience et du soutien continu d'une communauté active sur **Telegram et Skool**, où experts et apprenants partagent leurs astuces, répondent à vos questions et vous motivent à chaque étape.</p>
-            <div class="community-logos">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Logo Telegram">
-                <img src="https://via.placeholder.com/100x100?text=Skool+Logo" alt="Logo Skool"> </div>
-            <p>Accès à des experts • Partage de connaissances • Motivation et soutien mutuel • Networking précieux.</p>
-        </div>
-    </section>
-
-    <section>
-        <div class="container">
-            <h2>Découvrez les 50+ Heures de Contenu Détaillé de la DSA</h2>
-            <p>Chaque module de la DSA est conçu pour vous apporter des compétences concrètes et immédiatement applicables. Voici un aperçu de ce que vous allez maîtriser :</p>
-            <ul class="module-list">
-                <li class="module-item">
-                    <h3>Module 1 : Le Mindset de l'Entrepreneur Digital <span>(5h de vidéo)</span></h3>
-                    <ul>
-                        <li>Définir vos objectifs de liberté et de succès.</li>
-                        <li>Développer une mentalité d'abondance et de persévérance.</li>
-                        <li>Gestion du temps et productivité pour un business en ligne.</li>
-                    </ul>
-                </li>
-                <li class="module-item">
-                    <h3>Module 2 : La Création d'Offres Irrésistibles <span>(10h de vidéo)</span></h3>
-                    <ul>
-                        <li>Identifier votre avatar client et trouver une niche lucrative.</li>
-                        <li>Créer des produits numériques à forte valeur (e-books, formations, guides).</li>
-                        <li>Principes du copywriting et du storytelling pour captiver.</li>
-                        <li>Création de visuels et de vidéos engageantes.</li>
-                    </ul>
-                </li>
-                <li class="module-item">
-                    <h3>Module 3 : Les Tunnels de Vente qui Convertissent <span>(15h de vidéo)</span></h3>
-                    <ul>
-                        <li>Conception de pages de capture et de vente optimisées.</li>
-                        <li>Mise en place de séquences d'emails marketing automatisées.</li>
-                        <li>Utilisation d'outils de création de tunnels (ex: ClickFunnels, System.io).</li>
-                    </ul>
-                </li>
-                <li class="module-item">
-                    <h3>Module 4 : Promotion des Produits Numériques & Revente DSA <span>(15h de vidéo)</span></h3>
-                    <ul>
-                        <li>Stratégies de lancement de produits et webinaires.</li>
-                        <li>Maîtrise des publicités payantes (Facebook Ads, Google Ads).</li>
-                        <li>Marketing d'influence et partenariats stratégiques.</li>
-                        <li>**Section Spéciale : Votre Guide Complet pour Revendre la DSA et Garder 100% des Profits !**</li>
-                    </ul>
-                </li>
-                <li class="module-item">
-                    <h3>Module 5 : Optimisation et Scaling pour la Croissance <span>(5h de vidéo)</span></h3>
-                    <ul>
-                        <li>Analyse de données et KPIs pour des décisions éclairées.</li>
-                        <li>Comment scaler votre business et automatiser davantage.</li>
-                        <li>Les dernières tendances et innovations du marché digital.</li>
-                    </ul>
-                </li>
-            </ul>
-            <p><strong>Ce que vous recevez en rejoignant la DSA :</strong></p>
-            <ul>
-                <li>Accès Illimité à plus de **50 heures de vidéos HD** complètes.</li>
-                <li>Accès à vie aux mises à jour et nouveaux contenus du programme.</li>
-                <li>Accès exclusif aux **groupes Telegram et Skool** d'entraide et d'experts.</li>
-                <li>Templates, check-lists et ressources téléchargeables pour chaque module.</li>
-                <li>**LES DROITS DE REVENTE À 100% SUR LA FORMATION DSA !**</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <div class="container">
-            <h2>Questions Fréquemment Posées</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">Est-ce que cette formation est adaptée aux débutants ?</div>
-                    <div class="faq-answer">
-                        <p>Absolument ! La DSA est conçue pour guider les débutants sans expérience préalable, étape par étape, depuis les fondations jusqu'aux stratégies avancées. Chaque concept est expliqué clairement.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Combien de temps faut-il pour terminer le programme ?</div>
-                    <div class="faq-answer">
-                        <p>La formation contient plus de 50 heures de vidéo. Vous pouvez progresser à votre propre rythme. Certains la terminent en quelques semaines en y consacrant beaucoup de temps, d'autres sur plusieurs mois. L'accès est à vie, vous pouvez donc la revoir quand vous le souhaitez.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Quels sont les prérequis techniques ?</div>
-                    <div class="faq-answer">
-                        <p>Aucun prérequis technique complexe n'est nécessaire. Un ordinateur et une connexion internet stable suffisent. Nous vous guiderons pour tous les outils nécessaires.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Y a-t-il un support après l'achat ?</div>
-                    <div class="faq-answer">
-                        <p>Oui ! Vous aurez accès à notre communauté privée sur Telegram et Skool, où vous pourrez poser vos questions, échanger avec d'autres membres et bénéficier des conseils d'experts.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Comment fonctionne la revente à 100% des profits ?</div>
-                    <div class="faq-answer">
-                        <p>Lorsque vous achetez la DSA, vous obtenez automatiquement les droits de revente complets. La formation inclut un module détaillé qui vous explique exactement comment mettre en place votre système de vente et promouvoir la DSA, vous permettant de conserver 100% de chaque vente que vous réalisez.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="pricing" class="text-center">
-        <div class="container">
-            <h2>Votre Opportunité de Transformer Votre Vie Commence Ici</h2>
-            <p style="font-size: 1.3em; margin-bottom: 30px;">Imaginez maîtriser le marketing digital, lancer vos propres produits numériques **ET avoir un business clé en main avec les droits de revente à 100% de la DSA.** C'est votre chance de devenir financièrement indépendant.</p>
-            <h3>Investissement : [VOTRE PRIX ICI]</h3>
-            <p style="font-size: 1.1em; color: #555;">(Options de paiement disponibles : [Ex: Paiement en X fois, etc.])</p>
-            <a href="#" class="btn btn-big">Oui ! Je Veux la DSA et Ses Droits de Revente à 100% !</a>
-            <p style="margin-top: 20px; font-size: 0.9em;">(Garantie de remboursement [X jours] si vous n'êtes pas satisfait. La confiance avant tout.)</p>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 La DSA. Tous droits réservés.</p>
-            <p><a href="#">Mentions Légales</a> | <a href="#">Politique de Confidentialité</a> | <a href="#">Contact</a></p>
+            <p>Une question urgente ? Contactez-moi directement à <a href="mailto:kcoaching02@gmail.com">kcoaching02@gmail.com</a></p>
+            <p>&copy; 2024 Digital Success Academy. Tous droits réservés. Inspiré par les meilleures stratégies de marketing digital.</p>
+            <p><a href="https://stan.store/Strategiebykarine" target="_blank" rel="noopener noreferrer">Découvrez ma Boutique Stan Store</a></p>
         </div>
     </footer>
-
-    <script>
-        // JavaScript pour la FAQ dépliable
-        document.addEventListener('DOMContentLoaded', () => {
-            const faqQuestions = document.querySelectorAll('.faq-question');
-
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', () => {
-                    const answer = question.nextElementSibling;
-                    question.classList.toggle('active');
-                    answer.classList.toggle('active');
-
-                    if (answer.classList.contains('active')) {
-                        answer.style.maxHeight = answer.scrollHeight + "px";
-                    } else {
-                        answer.style.maxHeight = "0";
-                    }
-                });
-            });
-        });
-    </script>
 
 </body>
 </html>
