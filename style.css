@@ -32,6 +32,16 @@ body {
     padding: 0 var(--spacing-sm);
 }
 
+/* Header Logo */
+.header-logo {
+    max-width: 200px; /* Taille maximale pour le logo */
+    height: auto;
+    margin-bottom: var(--spacing-md); /* Espacement sous le logo */
+    display: block; /* S'assure qu'il prend sa propre ligne */
+    margin-left: auto; /* Centre le logo */
+    margin-right: auto; /* Centre le logo */
+}
+
 /* Hero Section */
 /* Inspiration Digital Wealth Academy: section hero très claire avec des accents */
 .hero {
@@ -264,18 +274,32 @@ ul.checkmark-list li::before {
     color: var(--color-accent);
 }
 
-/* Proof Visuals */
+/* Proof Visuals - CONTENEUR FLEXIBLE POUR LES IMAGES CÔTE À CÔTE */
 .proof-visuals {
     margin-top: var(--spacing-lg);
     text-align: center;
+    display: flex; /* Utilisation de flexbox pour aligner les images */
+    flex-wrap: wrap; /* Permet aux images de passer à la ligne sur petits écrans */
+    justify-content: center; /* Centre les images */
+    gap: var(--spacing-md); /* Espacement entre les images */
 }
 
 .proof-image {
-    max-width: 90%;
+    max-width: 45%; /* Ajuste la taille pour qu'elles soient côte à côte */
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Ombre plus douce */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     border: 3px solid var(--color-accent);
+    flex-grow: 1; /* Permet aux images de s'agrandir un peu pour remplir l'espace */
+    min-width: 280px; /* Taille minimale pour éviter qu'elles ne soient trop petites */
+}
+
+/* Styles spécifiques si tu as besoin de différencier les images (facultatif) */
+.mockup-image {
+    /* Styles spécifiques pour DSAMockup.png si nécessaire */
+}
+.plr-image {
+    /* Styles spécifiques pour PlrDSA.png si nécessaire */
 }
 
 .proof-caption {
@@ -285,13 +309,14 @@ ul.checkmark-list li::before {
     color: var(--color-accent);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    width: 100%; /* S'assure que la légende prend toute la largeur */
 }
 
 /* Final CTA Section */
 .final-cta {
-    background-color: var(--color-primary-bg); /* Fond blanc pour la section finale CTA */
+    background-color: var(--color-primary-bg);
     padding: var(--spacing-xl) var(--spacing-sm);
-    color: var(--color-text-dark); /* Texte sombre */
+    color: var(--color-text-dark);
 }
 
 .cta-large-text {
@@ -313,18 +338,18 @@ ul.checkmark-list li::before {
     margin-top: 2rem;
     font-weight: bold;
     color: var(--color-accent);
-    text-shadow: none; /* Pas d'ombre sur le texte pour plus de clarté */
+    text-shadow: none;
 }
 
 /* Footer */
 footer {
-    background-color: #EEEEEE; /* Gris très clair pour le footer */
+    background-color: #EEEEEE;
     text-align: center;
     padding: var(--spacing-md) var(--spacing-sm);
     margin-top: var(--spacing-lg);
     font-size: 0.9rem;
-    border-top: 1px solid #E0E0E0; /* Bordure très claire */
-    color: var(--color-text-light); /* Texte clair dans le footer */
+    border-top: 1px solid #E0E0E0;
+    color: var(--color-text-light);
 }
 
 footer a {
@@ -334,7 +359,7 @@ footer a {
 }
 
 footer a:hover {
-    color: var(--color-text-dark); /* Texte plus foncé au survol */
+    color: var(--color-text-dark);
 }
 
 /* Media Queries for Responsiveness */
@@ -381,7 +406,11 @@ footer a:hover {
         font-size: 1.05rem;
     }
     .proof-image {
-        max-width: 100%;
+        max-width: 100%; /* Sur mobile, les images de preuve prennent toute la largeur */
+    }
+    .proof-visuals {
+        flex-direction: column; /* Les images s'empilent sur mobile */
+        align-items: center;
     }
     .final-cta {
         padding: var(--spacing-lg) var(--spacing-sm);
