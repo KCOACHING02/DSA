@@ -32,23 +32,21 @@ body {
     padding: 0 var(--spacing-sm);
 }
 
-/* Header Logo */
+/* Header Logo - Amélioration de la responsivité */
 .header-logo {
-    max-width: 200px; /* Taille maximale pour le logo */
+    max-width: 250px; /* Taille maximale un peu plus grande pour le logo */
+    width: 100%; /* S'assure qu'il est réactif et ne déborde pas */
     height: auto;
-    margin-bottom: var(--spacing-md); /* Espacement sous le logo */
-    display: block; /* S'assure qu'il prend sa propre ligne */
-    margin-left: auto; /* Centre le logo */
-    margin-right: auto; /* Centre le logo */
+    margin: 0 auto var(--spacing-md) auto; /* Centre le logo et ajoute de l'espace en dessous */
+    display: block;
 }
 
 /* Hero Section */
-/* Inspiration Digital Wealth Academy: section hero très claire avec des accents */
 .hero {
     text-align: center;
     padding: var(--spacing-xl) var(--spacing-sm) var(--spacing-lg) var(--spacing-sm);
-    background-color: var(--color-primary-bg); /* Fond blanc pour le hero */
-    color: var(--color-text-dark); /* Texte sombre sur fond clair */
+    background-color: var(--color-primary-bg);
+    color: var(--color-text-dark);
     min-height: 70vh;
     display: flex;
     flex-direction: column;
@@ -65,8 +63,7 @@ body {
     margin-bottom: 0.75rem;
     font-weight: 800;
     line-height: 1.1;
-    color: var(--color-text-dark); /* Titre sombre */
-    /* Pas d'ombre portée pour un look plus épuré */
+    color: var(--color-text-dark);
 }
 
 /* Hero Subtitle */
@@ -75,7 +72,7 @@ body {
     max-width: 700px;
     margin: 0 auto 2.5rem auto;
     font-weight: 300;
-    color: var(--color-text-light); /* Sous-titre légèrement plus clair */
+    color: var(--color-text-light);
 }
 
 /* CTA Button - General */
@@ -83,7 +80,7 @@ body {
     display: inline-block;
     padding: 1.25rem 2.8rem;
     background-color: var(--color-accent);
-    color: var(--color-primary-bg); /* Texte blanc sur bouton doré */
+    color: var(--color-primary-bg);
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
@@ -117,19 +114,19 @@ body {
     margin-top: 1rem;
     font-style: italic;
     opacity: 0.9;
-    color: var(--color-text-light); /* Plus doux sur fond blanc */
+    color: var(--color-text-light);
 }
 
 /* General Section Styling */
 .section {
     padding: var(--spacing-lg) 0;
     text-align: center;
-    background-color: var(--color-primary-bg); /* Par défaut en blanc */
-    color: var(--color-text-dark); /* Texte sombre */
+    background-color: var(--color-primary-bg);
+    color: var(--color-text-dark);
 }
 
 .section-light {
-    background-color: var(--color-secondary-bg); /* Gris très clair pour l'alternance */
+    background-color: var(--color-secondary-bg);
     color: var(--color-text-dark);
 }
 
@@ -141,7 +138,7 @@ body {
     font-weight: 700;
     position: relative;
     display: inline-block;
-    color: var(--color-text-dark); /* Titre sombre */
+    color: var(--color-text-dark);
 }
 
 .section-title::after {
@@ -174,11 +171,11 @@ body {
 
 /* Card Styling */
 .card {
-    background-color: var(--color-primary-bg); /* Fond blanc pour les cartes */
+    background-color: var(--color-primary-bg);
     padding: 2.2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre plus subtile */
-    border: 1px solid #E0E0E0; /* Bordure très légère pour délimiter */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E0E0E0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -187,7 +184,7 @@ body {
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée au survol */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .card-icon {
@@ -198,7 +195,7 @@ body {
 
 .card h3 {
     font-family: var(--font-family-headings);
-    color: var(--color-text-dark); /* Titre de carte sombre */
+    color: var(--color-text-dark);
     margin-top: 0;
     font-size: 1.8rem;
     margin-bottom: 1rem;
@@ -208,7 +205,7 @@ body {
 .card p {
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--color-text-light); /* Texte de carte légèrement plus clair */
+    color: var(--color-text-light);
 }
 
 /* Checkmark List Styling */
@@ -222,7 +219,7 @@ ul.checkmark-list li {
     position: relative;
     margin-bottom: 0.9rem;
     font-size: 1.05rem;
-    color: var(--color-text-light); /* Texte de liste légèrement plus clair */
+    color: var(--color-text-light);
 }
 
 ul.checkmark-list li::before {
@@ -237,7 +234,7 @@ ul.checkmark-list li::before {
 
 /* Testimonials Section */
 .section-testimonials {
-    background-color: var(--color-secondary-bg); /* Fond gris clair pour les témoignages */
+    background-color: var(--color-secondary-bg);
 }
 
 .testimonial-grid {
@@ -248,7 +245,7 @@ ul.checkmark-list li::before {
 }
 
 .testimonial-card {
-    background-color: var(--color-primary-bg); /* Fond blanc pour les cartes de témoignage */
+    background-color: var(--color-primary-bg);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -274,43 +271,43 @@ ul.checkmark-list li::before {
     color: var(--color-accent);
 }
 
-/* Proof Visuals - CONTENEUR FLEXIBLE POUR LES IMAGES CÔTE À CÔTE */
+/* Proof Visuals - Conteneur pour les images de preuve (DSAMockup et PlrDSA) */
 .proof-visuals {
     margin-top: var(--spacing-lg);
     text-align: center;
-    display: flex; /* Utilisation de flexbox pour aligner les images */
-    flex-wrap: wrap; /* Permet aux images de passer à la ligne sur petits écrans */
-    justify-content: center; /* Centre les images */
-    gap: var(--spacing-md); /* Espacement entre les images */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
 }
 
 .proof-image {
-    max-width: 45%; /* Ajuste la taille pour qu'elles soient côte à côte */
+    max-width: 45%; /* Garde les images côte à côte sur les grands écrans */
+    width: 100%; /* S'assure qu'elles s'adaptent bien */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     border: 3px solid var(--color-accent);
-    flex-grow: 1; /* Permet aux images de s'agrandir un peu pour remplir l'espace */
-    min-width: 280px; /* Taille minimale pour éviter qu'elles ne soient trop petites */
+    /* Pas de flex-grow ou min-width ici pour éviter la distorsion sur mobile */
 }
 
-/* Styles spécifiques si tu as besoin de différencier les images (facultatif) */
-.mockup-image {
-    /* Styles spécifiques pour DSAMockup.png si nécessaire */
-}
-.plr-image {
-    /* Styles spécifiques pour PlrDSA.png si nécessaire */
+/* Section pour l'image Social.png */
+.social-image {
+    max-width: 700px; /* Taille raisonnable pour l'image sociale */
+    width: 100%; /* S'assure qu'elle est responsive */
+    height: auto;
+    margin: var(--spacing-md) auto; /* Centre l'image et ajoute de l'espacement */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.proof-caption {
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-top: 1.5rem;
-    color: var(--color-accent);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    width: 100%; /* S'assure que la légende prend toute la largeur */
+.cta-text-social {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+    color: var(--color-text-dark);
 }
+
 
 /* Final CTA Section */
 .final-cta {
@@ -378,6 +375,9 @@ footer a:hover {
         padding: 1.2rem 2.8rem;
         font-size: 1.2rem;
     }
+    .header-logo {
+        max-width: 200px; /* Ajuste la taille du logo sur les tablettes */
+    }
 }
 
 @media (max-width: 768px) {
@@ -406,11 +406,14 @@ footer a:hover {
         font-size: 1.05rem;
     }
     .proof-image {
-        max-width: 100%; /* Sur mobile, les images de preuve prennent toute la largeur */
+        max-width: 100%; /* Les images de preuve prennent toute la largeur sur les petits écrans */
     }
     .proof-visuals {
         flex-direction: column; /* Les images s'empilent sur mobile */
         align-items: center;
+    }
+    .social-image {
+        max-width: 90%; /* Ajuste l'image sociale sur mobile */
     }
     .final-cta {
         padding: var(--spacing-lg) var(--spacing-sm);
@@ -442,5 +445,8 @@ footer a:hover {
     }
     .proof-caption {
         font-size: 0.95rem;
+    }
+    .header-logo {
+        max-width: 150px; /* Taille encore plus petite pour le logo sur les très petits écrans */
     }
 }
