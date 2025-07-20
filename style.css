@@ -44,8 +44,8 @@ body {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: var(--spacing-xl) var(--spacing-sm) var(--spacing-lg) var(--spacing-sm);
-    background-color: var(--color-primary-bg);
+    padding: 0; /* On retire le padding du hero car il sera sur .hero-background */
+    background-color: var(--color-primary-bg); /* Fond de secours */
     color: var(--color-text-dark);
     min-height: 70vh;
     display: flex;
@@ -55,6 +55,32 @@ body {
     position: relative;
     overflow: hidden;
 }
+
+/* Nouveau style pour l'arrière-plan du hero */
+.hero-background {
+    width: 100%;
+    height: 100%;
+    position: absolute; /* Prend tout l'espace du .hero */
+    top: 0;
+    left: 0;
+    /* REMPLACE 'your-hero-background-image.jpg' par le chemin de ton image ! */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9)), url('your-hero-background-image.jpg') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex; /* Permet de centrer le contenu comme avant */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl) var(--spacing-sm) var(--spacing-lg) var(--spacing-sm); /* Retour du padding sur cette div */
+    z-index: 1; /* S'assure que le background est en dessous du contenu */
+}
+
+/* Le contenu du hero doit être au-dessus du background, donc on ajuste le z-index du conteneur */
+.hero .container {
+    position: relative;
+    z-index: 2; /* S'assure que le contenu est au-dessus du background */
+}
+
 
 /* Hero Title */
 .hero h1 {
@@ -187,11 +213,18 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
+/* Styles pour les icônes SVG dans les cartes */
 .card-icon {
-    font-size: 3rem;
     margin-bottom: 1rem;
-    color: var(--color-accent);
+    /* La couleur de l'icône doit être gérée dans le SVG ou via un filtre CSS si tu veux changer la couleur de tes SVGs */
 }
+.card-icon img {
+    width: 3rem; /* Taille par défaut pour les icônes de carte */
+    height: 3rem;
+    object-fit: contain;
+    color: var(--color-accent); /* Si ton SVG utilise 'currentColor' */
+}
+
 
 .card h3 {
     font-family: var(--font-family-headings);
@@ -282,13 +315,12 @@ ul.checkmark-list li::before {
 }
 
 .proof-image {
-    max-width: 45%; /* Garde les images côte à côte sur les grands écrans */
+    max-width: 30%; /* Pour 3 images par ligne sur grands écrans */
     width: 100%; /* S'assure qu'elles s'adaptent bien */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     border: 3px solid var(--color-accent);
-    /* Pas de flex-grow ou min-width ici pour éviter la distorsion sur mobile */
 }
 
 /* Section pour l'image Social.png / COMMUNAUTE.png */
@@ -319,6 +351,7 @@ ul.checkmark-list li::before {
     gap: var(--spacing-md);
 }
 
+/* Styles pour les icônes SVG dans les modules */
 .module-card {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
     border: 1px solid var(--color-accent);
@@ -333,9 +366,7 @@ ul.checkmark-list li::before {
 }
 
 .module-icon {
-    font-size: 4rem;
     margin-bottom: 1.5rem;
-    color: var(--color-accent);
     background-color: #FFF9E6;
     border-radius: 50%;
     padding: 0.5rem;
@@ -345,6 +376,12 @@ ul.checkmark-list li::before {
     width: 80px;
     height: 80px;
     box-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
+}
+.module-icon img {
+    width: 4rem; /* Taille pour les icônes de module */
+    height: 4rem;
+    object-fit: contain;
+    color: var(--color-accent); /* Si ton SVG utilise 'currentColor' */
 }
 
 ul.checkmark-list {
@@ -412,6 +449,9 @@ footer a:hover {
     .hero h1 {
         font-size: 3rem;
     }
+    .hero-background {
+        padding: var(--spacing-lg) var(--spacing-sm) var(--spacing-md) var(--spacing-sm); /* Ajuste le padding pour les écrans plus petits */
+    }
     .section-title {
         font-size: 2.5rem;
     }
@@ -424,26 +464,24 @@ footer a:hover {
         font-size: 1.2rem;
     }
     .header-logo {
-        max-width: 200px; /* Ajuste la taille du logo sur les tablettes */
+        max-width: 200px;
     }
-    /* Ajustements pour la responsivité des modules */
     .module-card h3 {
         font-size: 1.7rem;
     }
-    .module-icon {
-        font-size: 3.5rem;
-        width: 70px;
-        height: 70px;
+    .module-icon img {
+        width: 3.5rem;
+        height: 3.5rem;
     }
     ul.checkmark-list li {
         font-size: 1rem;
     }
+    .proof-image {
+        max-width: 45%; /* Deux par ligne sur tablette */
+    }
 }
 
 @media (max-width: 768px) {
-    .hero {
-        padding: var(--spacing-lg) var(--spacing-sm) var(--spacing-md) var(--spacing-sm);
-    }
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -466,14 +504,14 @@ footer a:hover {
         font-size: 1.05rem;
     }
     .proof-image {
-        max-width: 100%; /* Les images de preuve prennent toute la largeur sur les petits écrans */
+        max-width: 100%; /* Une par ligne sur mobile */
     }
     .proof-visuals {
-        flex-direction: column; /* Les images s'empilent sur mobile */
+        flex-direction: column;
         align-items: center;
     }
     .social-image {
-        max-width: 90%; /* Ajuste l'image sociale sur mobile */
+        max-width: 90%;
     }
     .final-cta {
         padding: var(--spacing-lg) var(--spacing-sm);
@@ -507,19 +545,17 @@ footer a:hover {
         font-size: 0.95rem;
     }
     .header-logo {
-        max-width: 150px; /* Taille encore plus petite pour le logo sur les très petits écrans */
+        max-width: 150px;
     }
-    /* Ajustements pour la responsivité des modules */
     .module-card {
         padding: 1.5rem;
     }
     .module-card h3 {
         font-size: 1.4rem;
     }
-    .module-icon {
-        font-size: 3rem;
-        width: 60px;
-        height: 60px;
+    .module-icon img {
+        width: 3rem;
+        height: 3rem;
     }
     ul.checkmark-list li {
         font-size: 0.95rem;
