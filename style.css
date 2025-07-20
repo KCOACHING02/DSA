@@ -308,6 +308,11 @@ ul.checkmark-list li::before {
     color: var(--color-text-dark);
 }
 
+/* Nouveau style pour les CTA en bas de section */
+.cta-section-bottom {
+    margin-top: var(--spacing-lg); /* Ajoute de l'espace au-dessus du bouton */
+    text-align: center;
+}
 
 /* Final CTA Section */
 .final-cta {
