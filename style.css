@@ -314,48 +314,46 @@ ul.checkmark-list li::before {
     text-align: center;
 }
 
-/* Styles pour les nouveaux modules */
+/* Styles pour les modules */
 .module-sections {
-    /* Tu peux ajuster le gap si tu veux plus ou moins d'espace entre les cartes de modules */
     gap: var(--spacing-md);
 }
 
 .module-card {
-    /* Style spécifique pour les cartes de modules si tu veux les différencier un peu */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-    border: 1px solid var(--color-accent); /* Ajoute une bordure de couleur accent */
-    padding: 2.5rem; /* Un peu plus de padding pour l'espace intérieur */
-    text-align: center; /* Centre le contenu des cartes de modules */
-    align-items: center; /* Centre les éléments flex horizontalement */
+    border: 1px solid var(--color-accent);
+    padding: 2.5rem;
+    text-align: center;
+    align-items: center;
 }
 
 .module-card h3 {
-    font-size: 2rem; /* Rendre les titres des modules un peu plus grands */
+    font-size: 2rem;
     margin-bottom: 1.5rem;
 }
 
 .module-icon {
-    font-size: 4rem; /* Icônes plus grandes */
+    font-size: 4rem;
     margin-bottom: 1.5rem;
-    color: var(--color-accent); /* Garde la couleur accent pour les icônes */
-    background-color: #FFF9E6; /* Un fond léger pour l'icône, rendant le cercle plus visible */
-    border-radius: 50%; /* Rend l'arrière-plan de l'icône circulaire */
-    padding: 0.5rem; /* Espace autour de l'icône */
-    display: inline-flex; /* Permet le centrage et la taille du fond */
+    color: var(--color-accent);
+    background-color: #FFF9E6;
+    border-radius: 50%;
+    padding: 0.5rem;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 80px; /* Taille fixe pour le cercle */
-    height: 80px; /* Taille fixe pour le cercle */
-    box-shadow: 0 2px 10px rgba(212, 175, 55, 0.2); /* Ombre légère */
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
 }
 
 ul.checkmark-list {
-    text-align: left; /* Aligne le texte des listes à gauche à l'intérieur de la carte centrée */
-    width: 100%; /* S'assure que la liste prend toute la largeur disponible */
+    text-align: left;
+    width: 100%;
 }
 
 ul.checkmark-list li {
-    font-size: 1.1rem; /* Texte des listes légèrement plus grand */
+    font-size: 1.1rem;
 }
 
 
