@@ -291,7 +291,7 @@ ul.checkmark-list li::before {
     /* Pas de flex-grow ou min-width ici pour éviter la distorsion sur mobile */
 }
 
-/* Section pour l'image Social.png */
+/* Section pour l'image Social.png / COMMUNAUTE.png */
 .social-image {
     max-width: 700px; /* Taille raisonnable pour l'image sociale */
     width: 100%; /* S'assure qu'elle est responsive */
@@ -313,6 +313,51 @@ ul.checkmark-list li::before {
     margin-top: var(--spacing-lg); /* Ajoute de l'espace au-dessus du bouton */
     text-align: center;
 }
+
+/* Styles pour les nouveaux modules */
+.module-sections {
+    /* Tu peux ajuster le gap si tu veux plus ou moins d'espace entre les cartes de modules */
+    gap: var(--spacing-md);
+}
+
+.module-card {
+    /* Style spécifique pour les cartes de modules si tu veux les différencier un peu */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    border: 1px solid var(--color-accent); /* Ajoute une bordure de couleur accent */
+    padding: 2.5rem; /* Un peu plus de padding pour l'espace intérieur */
+    text-align: center; /* Centre le contenu des cartes de modules */
+    align-items: center; /* Centre les éléments flex horizontalement */
+}
+
+.module-card h3 {
+    font-size: 2rem; /* Rendre les titres des modules un peu plus grands */
+    margin-bottom: 1.5rem;
+}
+
+.module-icon {
+    font-size: 4rem; /* Icônes plus grandes */
+    margin-bottom: 1.5rem;
+    color: var(--color-accent); /* Garde la couleur accent pour les icônes */
+    background-color: #FFF9E6; /* Un fond léger pour l'icône, rendant le cercle plus visible */
+    border-radius: 50%; /* Rend l'arrière-plan de l'icône circulaire */
+    padding: 0.5rem; /* Espace autour de l'icône */
+    display: inline-flex; /* Permet le centrage et la taille du fond */
+    align-items: center;
+    justify-content: center;
+    width: 80px; /* Taille fixe pour le cercle */
+    height: 80px; /* Taille fixe pour le cercle */
+    box-shadow: 0 2px 10px rgba(212, 175, 55, 0.2); /* Ombre légère */
+}
+
+ul.checkmark-list {
+    text-align: left; /* Aligne le texte des listes à gauche à l'intérieur de la carte centrée */
+    width: 100%; /* S'assure que la liste prend toute la largeur disponible */
+}
+
+ul.checkmark-list li {
+    font-size: 1.1rem; /* Texte des listes légèrement plus grand */
+}
+
 
 /* Final CTA Section */
 .final-cta {
@@ -382,6 +427,18 @@ footer a:hover {
     }
     .header-logo {
         max-width: 200px; /* Ajuste la taille du logo sur les tablettes */
+    }
+    /* Ajustements pour la responsivité des modules */
+    .module-card h3 {
+        font-size: 1.7rem;
+    }
+    .module-icon {
+        font-size: 3.5rem;
+        width: 70px;
+        height: 70px;
+    }
+    ul.checkmark-list li {
+        font-size: 1rem;
     }
 }
 
@@ -453,5 +510,20 @@ footer a:hover {
     }
     .header-logo {
         max-width: 150px; /* Taille encore plus petite pour le logo sur les très petits écrans */
+    }
+    /* Ajustements pour la responsivité des modules */
+    .module-card {
+        padding: 1.5rem;
+    }
+    .module-card h3 {
+        font-size: 1.4rem;
+    }
+    .module-icon {
+        font-size: 3rem;
+        width: 60px;
+        height: 60px;
+    }
+    ul.checkmark-list li {
+        font-size: 0.95rem;
     }
 }
